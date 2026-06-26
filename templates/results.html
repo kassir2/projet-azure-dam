@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Résultats</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="main">
+
+    <h2>🔎 Résultats pour : "{{ query }}"</h2>
+
+    <div class="results-grid">
+
+        {% for img in images %}
+            <div class="card">
+                <img src="{{ img.url }}" alt="image">
+
+                <div class="tags">
+                    {% for tag in img.tags %}
+                        <span>{{ tag }}</span>
+                    {% endfor %}
+                </div>
+            </div>
+        {% endfor %}
+
+    </div>
+
+</div>
+
+</body>
+</html>

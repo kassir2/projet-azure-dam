@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<body>
+<head>
+    <meta charset="UTF-8">
+    <title>PassionFroid Photos</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+    <div class="logo">
+        📦 <strong>PassionFroid</strong>
+    </div>
+    <div class="menu">
+        <a href="#">🔍 Search</a>
+        <a href="#">🔒 Login</a>
+    </div>
+
+    <div class="filters">
+
+    <label>Humain :</label>
+    <select name="human">
+        <option value="">Tous</option>
+        <option value="yes">Oui</option>
+        <option value="no">Non</option>
+    </select>
+
+    <label>Environnement :</label>
+    <input type="text" name="environment">
+
+</div>
+</nav>
+
+<!-- CONTENU PRINCIPAL -->
+<div class="main">
+
+    <h1>🔎 PassionFroid Photos</h1>
+
+  <form action="/search" method="GET">
+    <input 
+        type="text" 
+        name="q"
+        placeholder="Search by title or tags (e.g., canard with human)"
+    >
+    <button type="submit">Search</button>
+</form>
+
+    <div class="advanced">
+        <a href="#">⚙️ Advanced Filters</a>
+    </div>
+
+    <!-- Résultats -->
+    <div id="results"></div>
+
+</div>
+
+<!-- JS -->
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+</html>
