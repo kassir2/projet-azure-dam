@@ -39,6 +39,12 @@ Téléchargement
 ##  Intelligence artificielle
 Les images sont analysées automatiquement grâce à Azure Computer Vision afin de générer des tags pour améliorer la recherche.
 
+## Organisation du projet
+Le projet a été réalisé individuellement.
+Les tâches ont été organisées personnellement (To Do / En cours / Terminé).
+
+
+
 ### 1. Cloner
 bash
 git clone https://github.com/ton-username/projet-azure-dam.git
